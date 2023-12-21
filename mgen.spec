@@ -34,7 +34,3 @@ rm -rf %{_sourcedir}
 %files
 %license LICENSE
 %{_bindir}/%{name}
-
-%changelog
-* Wed Dec 20 2023 Nivesh Varma <nivesh.varma@jhuapl.edu> - 5.1.2-1
-  - Initial packaging
