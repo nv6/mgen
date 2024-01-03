@@ -76,7 +76,7 @@ Tested on AlmaLinux 9.2
 dnf install -y epel-release
 dnf group install -y "Development Tools"
 dnf install -y libpcap-devel rpmdevtools rpmlint
-mkdir SOURCES
+rpmdev-setuptree
 rpmbuild -ba mgen.spec
 ```
 
