@@ -80,4 +80,4 @@ rpmdev-setuptree
 rpmbuild -ba mgen.spec
 ```
 
-MGEN rpm package will be built in `RPMS/x86_84`.
+MGEN rpm package will be built in `~/rpmbuild/RPMS/x86_84`.
