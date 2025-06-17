@@ -21,19 +21,15 @@ cd makefiles
 make -f Makefile.linux
 ```
 
-## Build RPM package
+## Build RPM package using Docker
 
-Tested on AlmaLinux 9.5
-
-```
-dnf install -y epel-release
-dnf group install -y "Development Tools"
-dnf install -y libpcap-devel rpmdevtools rpmlint
-rpmdev-setuptree
-rpmbuild -ba mgen.spec
+```bash
+git clone https://github.com/nv6/mgen.git
+cd mgen
+docker buildx bake
 ```
 
-MGEN rpm package will be built in `~/rpmbuild/RPMS/x86_84`.
+MGEN RPM package will be generated in `./rpmbuild/RPMS/x86_64`. Other subdirectories will contain debug and source RPMs.
 
 ## New features
 
