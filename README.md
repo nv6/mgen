@@ -9,15 +9,31 @@ Requires Protolib:
 - https://www.nrl.navy.mil/itd/ncs/products/protolib
 - https://github.com/USNavalResearchLaboratory/protolib
     
-The MGEN build expects the "protolib" source tree (or a symbolic link to it) to be located in the top level of the "mgen" source tree. For example, to download and build on Linux:
+The MGEN build expects the "protolib" source tree (or a symbolic link to it) to be located in the top level of the "mgen" source tree.
+
+## Build Linux binary
     
 ```bash
-git clone https://github.com/USNavalResearchLaboratory/mgen.git
+git clone https://github.com/nv6/mgen.git
 cd mgen
 git submodule update --init
 cd makefiles
 make -f Makefile.linux
 ```
+
+## Build RPM package
+
+Tested on AlmaLinux 9.5
+
+```
+dnf install -y epel-release
+dnf group install -y "Development Tools"
+dnf install -y libpcap-devel rpmdevtools rpmlint
+rpmdev-setuptree
+rpmbuild -ba mgen.spec
+```
+
+MGEN rpm package will be built in `~/rpmbuild/RPMS/x86_84`.
 
 ## New features
 
@@ -67,17 +83,3 @@ in the distribution.
 | protolib    | NRL Protolib source tree (See https://www.nrl.navy.mil/itd/ncs/products/protolib)
 | makefiles   | Directory with os-specific Makefiles. Linux specific makefiles are at the top level, win32 and wince subdirectories contains windows build files. |
 | setup.py    | Python installation script for installing the Python 'mgen' package that provides for Python-based control and monitoring of MGEN. This package assumes the 'mgen' binary is installed/located in the executable "path" (e.g., "/usr/local/bin") This package also requires that the Protolib (see above) 'protokit' Python package has also been installed. There is a similar 'setup.py' script in the "protolib" source tree. |
-
-## Building RPM Package
-
-Tested on AlmaLinux 9.2
-
-```
-dnf install -y epel-release
-dnf group install -y "Development Tools"
-dnf install -y libpcap-devel rpmdevtools rpmlint
-rpmdev-setuptree
-rpmbuild -ba mgen.spec
-```
-
-MGEN rpm package will be built in `~/rpmbuild/RPMS/x86_84`.
