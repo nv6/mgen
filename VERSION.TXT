@@ -1,3 +1,7 @@
+Version 5.1.2
+=============
+    - Incorporates protolib updates, other changes since 5.1.1 (see Github release changelog)
+
 Version 5.1.1
 =============
     - Addition of "analytic" and "report" options for built-in per-flow analysis of

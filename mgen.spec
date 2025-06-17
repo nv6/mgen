@@ -7,7 +7,7 @@ License:        FIXME
 URL:            https://github.com/nv6/mgen
 %undefine       _disable_source_fetch
 Source0:        https://github.com/nv6/mgen/releases/download/%{version}/mgen-protolib-src.tar.gz
-%define         SHA256SUM0 39738b1cf80465b01a8cbe5b58d69ec8082d14315f0e748355f5a48098244f11
+%define         SHA256SUM0 2b48034664ddd352227756af26f5f0218a1e699b90cba7a726a90dfedf5a6c32
 Requires:       libpcap
 BuildRequires:  gcc make libpcap-devel
 
