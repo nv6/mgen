@@ -1,5 +1,5 @@
 Name:           mgen
-Version:        5.1.1
+Version:        5.1.2
 Release:        1%{?dist}
 Summary:        MGEN traffic generator
 
