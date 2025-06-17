@@ -6,8 +6,8 @@ Summary:        MGEN traffic generator
 License:        FIXME
 URL:            https://github.com/nv6/mgen
 %undefine       _disable_source_fetch
-Source0:        https://github.com/nv6/mgen/archive/refs/tags/%{version}.tar.gz
-%define         SHA256SUM0 5ed2ee158514c0c10c7f9fbdab803e68cb9e0fabce74b65132ead65661e27a4f
+Source0:        https://github.com/nv6/mgen/releases/download/%{version}/mgen-protolib-src.tar.gz
+%define         SHA256SUM0 39738b1cf80465b01a8cbe5b58d69ec8082d14315f0e748355f5a48098244f11
 Requires:       libpcap
 BuildRequires:  gcc make libpcap-devel
 
